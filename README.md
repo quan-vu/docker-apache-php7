@@ -6,4 +6,10 @@
 $ docker-compose up --build
 ```
 
-- Open application at this url: http://localhost:8080/
+- Web application: http://localhost:8080/
+- PHPMyadmin: http://localhost:8002
+- MySQL connection: 
+	- Host: 127.0.0.1
+	- Port: 33062
+	- User: app
+	- Password: app
