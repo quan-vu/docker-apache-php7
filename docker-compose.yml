@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    container_name: docker-apache-php7
+    ports:
+      - "8080:80"
+    volumes:
+      - ./www:/var/www
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql:5.6
+    ports:
+      - "33062:3306"
+    environment:
+      MYSQL_DATABASE: "app"
+      MYSQL_USER: "app"
+      MYSQL_PASSWORD: "app"
+      MYSQL_ROOT_PASSWORD: "test"
